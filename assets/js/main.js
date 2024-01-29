@@ -17,7 +17,7 @@ $('.header-top .btn-cancel').click(function () {
 });
 
 // sc-information JSON
-$.get('../../assets/json/information.json')
+$.get('../json/information.json')
     .done(function (data) {
         // console.log(data);
         let slideTag = ``;
@@ -47,7 +47,7 @@ $.get('../../assets/json/information.json')
     });
 
 // sc-review JSON
-$.get('../../assets/json/review.json')
+$.get('../json/review.json')
     .done(function (data) {
         // console.log(data);
         let slideTag = ``;
@@ -71,7 +71,7 @@ $.get('../../assets/json/review.json')
     });
 
 // sc-latest JSON
-$.get('../../assets/json/latest.json')
+$.get('../json/latest.json')
     .done(function (data) {
         function latestData(arrayNum) {
             let itemTag = '';
@@ -117,7 +117,7 @@ $.get('../../assets/json/latest.json')
     });
 
 // sc-solution JSON
-$.get('../../assets/json/solution.json')
+$.get('../json/solution.json')
     .done(function (data) {
         function solutionData(arrayNum) {
             let itemTag = ``;
@@ -194,7 +194,7 @@ menuClick('.sc-new');
 
 // sc-quick JSON
 function quickContent(category) {
-    fetch('../../assets/json/quick.json')
+    fetch('../json/quick.json')
         .then(res => res.json())
         .then(json => {
             data = json[category];
@@ -243,7 +243,7 @@ $('.sc-quick .tab-area--btn .tab-item').click(function () {
 
 // sc-new JSON
 function newContent(category) {
-    fetch('../../assets/json/new.json')
+    fetch('../json/new.json')
         .then(res => res.json())
         .then(json => {
             data = json[category];
