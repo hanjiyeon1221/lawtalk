@@ -1,0 +1,20 @@
+// 텍스트 줄바꿈
+@mixin ellipsis($line: 1) {
+    @if ($line > 1) {
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    } @else {
+        white-space: nowrap;
+    }
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 반응형 조절
+@mixin mobile($width: 959px) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
